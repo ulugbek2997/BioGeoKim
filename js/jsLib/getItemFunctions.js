@@ -45,6 +45,8 @@ function getPaperMain(item1,item2){
      authorImg:item2+`${item1['author']['image']}`,
      authorName:item1['author']['name'],
      hashTags:hashTagsArr,
+     langId:item1['langId'],
+     journalId:item1['journalId'],
      authorId:item1['author']['id']
  }
  return paperMain

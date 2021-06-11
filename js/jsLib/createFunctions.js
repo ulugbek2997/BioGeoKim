@@ -83,7 +83,7 @@ function createCard(item1){
       const authorNameLi=document.createElement('li');
       authorNameLi.classList.add('author-name')
       const authorNameLink=document.createElement('a')
-      authorNameLink.href="./authorPage.html" +`authorId=${item1['authorId']}`;
+      authorNameLink.href=`./authorPage.html?langId=${item1['langId']}&journalId=${item1['journalId']}&authorId=${item1['authorId']}`;
       authorNameLink.innerText=item1['authorName'];
       authorNameLi.append(authorNameLink);
       authorUL.append(authorImgLi , authorNameLi);
@@ -95,7 +95,7 @@ function createCard(item1){
           const hashtagLink=document.createElement('a');
           hashtag.classList.add('hashtags');
           if(i<4){
-              hashtagLink.innerText= item1['hashTags'][i]['tagName'];
+              hashtagLink.innerText= `#${item1['hashTags'][i]['tagName']}`;
               hashtagLink.href ="./heshtagsPage.html"+ `tagId=${item1['hashTags'][i]['tagId']}` 
           }else{
               break;
@@ -124,6 +124,55 @@ function createCard(item1){
       return paperBaner
     }
 
+    function authorCard(item1,item2){
+
+      const authorCard=document.createElement('div');
+      authorCard.classList.add('author-card');
+  
+      const cardImg=document.createElement('img');
+      cardImg.classList.add('author-card-img');
+      cardImg.src=item2+ item1[0]['author']['image'];
+  
+      const cardTitle=document.createElement('h2');
+      cardTitle.classList.add('author-card-name');
+      cardTitle.innerText = item1[0]['author']['name']
+  
+      const cardText=document.createElement('p');
+      cardText.classList.add("author-card-text")
+      cardText.innerHTML= item1[0]['author']['bio'];
+  
+      const linksUl=document.createElement('ul');
+      linksUl.classList.add('author-card-socialPageLinks')
+  
+      const instagramLink=document.createElement('li');
+      instagramLink.classList.add('author-card-links');
+      const instagramLinkA=document.createElement('a');
+      const instagramLinkIcon=document.createElement('i');
+      instagramLinkIcon.classList.add("ri-instagram-line");
+      instagramLinkA.append(instagramLinkIcon);
+      instagramLink.append(instagramLinkA);
+      
+      const twitterLink=document.createElement('li');
+      twitterLink.classList.add('author-card-links');
+      const twitterLinkA=document.createElement('a');
+      const twitterLinkIcon=document.createElement('i');
+      twitterLinkIcon.classList.add("ri-twitter-fill");
+      twitterLinkA.append(twitterLinkIcon);
+      twitterLink.append(twitterLinkA);
+  
+      const facebookLink=document.createElement('li');
+      facebookLink.classList.add('author-card-links');
+      const facebookLinkA=document.createElement('a');
+      facebookLinkA.href=item1[0]['author']['facebook']
+      const facebookLinkIcon=document.createElement('i');
+      facebookLinkIcon.classList.add("ri-facebook-fill");
+      facebookLinkA.append(facebookLinkIcon);
+      facebookLink.append(facebookLinkA);
+  
+      linksUl.append(instagramLink,twitterLink,facebookLink);
+      authorCard.append(cardImg,cardTitle,cardText,linksUl);
+      return authorCard
+  }
 
 
 
@@ -135,4 +184,4 @@ function createCard(item1){
         return Math.floor(Math.random() * max);
      }
 
-    export {createCard , createShortNewsCard , creatPaperCard , createPaperBaner, render , randomNumber}
+    export {createCard , createShortNewsCard , creatPaperCard , createPaperBaner, render , randomNumber , authorCard}

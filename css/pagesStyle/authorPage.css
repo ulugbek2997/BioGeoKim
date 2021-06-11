@@ -1,8 +1,9 @@
 @import url(../varabiles.css);
-@import url(../header/header-style.css);
+@import url(../stdClasses.css);
+@import url(../componentsStyle/header.css);
 @import url(../author-card/author-card-style.css);
 @import url(../card/card-style.css);
-@import url(../footer/footer-styles.css);
+@import url(../componentsStyle/footer.css);
 
 .row{
     display: flex;

@@ -3,32 +3,30 @@
 .paper{
 height: max-content;
 width: 850px;
+padding-bottom: 2em;
 background-color: var(--background-color);
 }
 
 .paper-title{
-position: relative;
 width: 90%;
 height: 52.1px;
 font-size: 22px;
 font-weight: 500;
-line-height: 26px;
-left: 5%;
-padding-top: 30.6px;
+margin-left: 5%;
+margin-top: 1em;
+overflow: hidden;
 }
 
 .paper-text{
-position: relative;
 width:90%;
-height: auto;
 font-size: 14px;
 font-weight: 400;
 line-height: 17px;
-left: 5%;
-margin-top: 30.6px;
+margin:1em 0 0 5%;
+overflow: hidden;
 }
 
-.paper-img{
+.paper img{
 position: relative;
 height: 577px;
 width: 90%;
@@ -39,6 +37,8 @@ margin-top: 59.39px;
 
 .paper-footer{
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
     position: relative;
     width: 90%;
@@ -48,6 +48,7 @@ margin-top: 59.39px;
 
 .paper-footer ul{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -60,7 +61,6 @@ margin-top: 59.39px;
 .author-name{
 font-size: 14px;
 font-weight: 400;
-line-height: 17px;
 margin-left: 1em;
 }
 
@@ -70,36 +70,4 @@ margin-left: 1em;
 
 .paper-footer li :hover{
     color: var(--main-color);
-}
-
-@media only screen and (max-width: 1366px){
-    .paper{
-        width: 90%;
-    }
-
-}
-
-@media only screen and (max-width: 768px){
-    
-    .paper{
-        height: max-content;
-        padding-bottom: 1em;
-    }
-    
-    .paper-img{
-     display: none;
-    }
-    .paper-footer{
-        display: block;
-        width: 100%;
-    }
-    .paper-footer ul{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-
-    .paper-text , .paper-footer{
-        position: 0;
-    }
 }

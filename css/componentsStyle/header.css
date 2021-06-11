@@ -8,16 +8,15 @@ header{
 header a:hover{
     color: var(--main-color);
 }
-
 .hamburger{
     display: none;
     font-size:xx-large;
     margin: var(--pane-margin);
 }
-
- 
 .activ{
+    position: absolute;
     display: block;
+    top: 5em;
     animation-name: example;
     animation-duration: 1s;
 }

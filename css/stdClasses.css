@@ -5,6 +5,9 @@
 .dBlock{
 display: block;
 }
+.dNone{
+    display: none;
+}
 /*justify-content*/
 .contentCenter{
     justify-content: center;
@@ -31,7 +34,6 @@ display: block;
 .marginLeft{
     margin-left: 1em;
 }
-
 /* color */
 .mainColor{
     color: var(--main-color);

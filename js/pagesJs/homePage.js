@@ -1,4 +1,4 @@
-import { selectCategory } from '../companents/headerJS.js';
+// import { selectCategory } from '../companents/headerJS.js';
 import { baseURL, imgesUrl,size,offset } from '../jsLib/articles.js';
 import {createCard,createShortNewsCard,randomNumber} from '../jsLib/createFunctions.js';
 import { getCardMain, getShortNewsCardMain } from '../jsLib/getItemFunctions.js';
@@ -9,7 +9,7 @@ if(!langId){
   langId=1;
 }
 console.log(langId)
-selectCategory(langId);
+// selectCategory(langId);
 
 
 for(let i=1;i<4;i++){

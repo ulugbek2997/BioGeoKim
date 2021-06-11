@@ -1,50 +1,39 @@
 @import url(../varabiles.css);
+@import url(../stdClasses.css);
 @import url(../componentsStyle/header.css);
 @import url(../componentsStyle/paper.css);
 @import url(../componentsStyle/shortNewsCard.css);
 @import url(../componentsStyle/footer.css);
 
-main{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
+.row .paper{
+    width: 58%;
 }
 
-.row p a{
-    display: none;
+.row .shortNewsCard{
+    width: 40%;
 }
 
-.row p  img{
-    position: relative;
-height: 577px;
-width: 90%;
-left: 5%;
-margin-top: 59.39px;
-}
-
-
-.row{
-    display: flex;
-    position: relative;
-    width: 90%;
-    left: 5%;
-}
-
-.row .catalogue-paper{
-    margin-left: 30px;
-}
-
-.paper-text a{
-    display: none;
-}
-
-@media only screen and (max-width: 1360px){
-    .row {
+@media only screen and (max-width: 768px){
+    main .row{
         display: block;
     }
+    .row .paper , .row .shortNewsCard{
+        width: 100%;
+    }
 
-    .row .catalogue-paper{
-        margin-top: 30px;
+    .row .shortNewsCard{
+        margin-top: 1em;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .container{
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .container{
+        width: 1200px;
     }
 }
