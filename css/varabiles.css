@@ -3,7 +3,6 @@
     margin: 0;
     list-style: none;
     text-decoration: none;
-    /* font-family:; */
 }
 
 @import url(./header/header-style.css);
@@ -25,4 +24,8 @@
 
   main, footer{
       display: block;
+  }
+
+  .container{
+      width: 90%;
   }

@@ -1,0 +1,43 @@
+/* display */
+.dFlex{
+    display:flex;
+}
+.dBlock{
+display: block;
+}
+/*justify-content*/
+.contentCenter{
+    justify-content: center;
+}
+.contentSpaceBetween{
+    justify-content: space-between;
+}
+/* align-items */
+.alignCenter{
+    align-items: center;
+}
+
+/* width  */
+.width90{
+    width: 96%;
+}
+/* margin */
+.marTop{
+    margin-top: 2em;
+}
+
+/* color */
+.mainColor{
+    color: var(--main-color);
+}
+
+/* font-size */
+.titleSize{
+    font-size: 20px;
+}
+.textSizze{
+    font-size: 14px;
+}
+.iconSize{
+    font-size: 16px;
+}
