@@ -25,6 +25,12 @@ display: block;
 .marTop{
     margin-top: 2em;
 }
+.paneMargin{
+    margin: 0 1em 0 1em;
+}
+.marginLeft{
+    margin-left: 1em;
+}
 
 /* color */
 .mainColor{

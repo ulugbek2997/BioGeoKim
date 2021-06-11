@@ -9,5 +9,30 @@
 
 .sections{
     width: 32%;
-    background-color: blue;
+}
+
+@media only screen and (max-width: 768px){
+    main .container{
+        display: block;
+    }
+    .sections{
+        width: 100%;
+    }
+    .sections~.sections{
+        margin-top: 1em;
+    }
+
+
+}
+
+@media only screen and (max-width: 1200px){
+    .container{
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .container{
+        width: 1200px;
+    }
 }

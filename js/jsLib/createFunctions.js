@@ -1,14 +1,12 @@
 
 function createCard(item1){
-    const card= document.createElement('a');
-    card.href= "./html/paperPage.html?"+`langId=${item1['langId']}&id=${item1['id']}&journalId=${item1['journalId']}`;
+    const card= document.createElement('div');
     card.classList.add('card')
-  
-    const cardImg =document.createElement('div');
+    card.href= "./html/paperPage.html?"+`langId=${item1['langId']}&id=${item1['id']}&journalId=${item1['journalId']}`;
+
+    const cardImg=document.createElement('img');
     cardImg.classList.add('card-img');
-    const cardImgMain=document.createElement('img');
-    cardImgMain.src= item1['imgSrc'];
-    cardImg.append(cardImgMain);
+    cardImg.src= item1['imgSrc'];
   
      const titleCard = document.createElement('h4');
      titleCard.innerText = item1['title'];
