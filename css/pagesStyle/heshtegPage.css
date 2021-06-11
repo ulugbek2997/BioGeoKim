@@ -1,0 +1,31 @@
+@import url(../varabiles.css);
+@import url(../categoriy-bar/category-bar.css);
+@import url(../header/header-style.css);
+@import url(../card/card-style.css);
+@import url(../footer/footer-styles.css);
+
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+
+}
+
+main h2{
+    margin: 1em 0 1em 30px;
+}
+
+@media only screen and (min-width: 1366px){
+    .main-hashteg{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .main-hashteg h2{
+        width: 1366px;
+    }
+
+}
