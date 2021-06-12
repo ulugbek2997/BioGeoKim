@@ -5,44 +5,38 @@
     width: 410px;
     height: 443px;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.161);
+    margin-top: 2em;
 }
 
 .author-card-img{
-    position: relative;
     width: 100px;
     height: 100px;
     border-radius: 50px;
-    top: 66px;
-    left: 155px;
+    margin: 30% 0 0 40%;
 }
 
 .author-card-name{
-position: relative;
-display: flex;
-justify-content: center;
 height: 21px;
 width: 100%;
-top: 96px;
+margin-top: 1em;
+overflow: hidden;
 text-align: center;
 }
 
-.author-card-text{
-position: relative;    
+.author-card-text{    
 height: 68px;
-width: 90%;
-top: 110px;
-left: 5%;
+width: 100%;
+margin-top: 2em;
 font-size: 14px;
 font-weight: 400;
+overflow: hidden;
 text-align: center;
 }
 
 .author-card-socialPageLinks{
     display: flex;
     justify-content: center;
-    position: relative;
     width: 100%;
-    top: 172.1px;
 }
 
 .author-card-links{

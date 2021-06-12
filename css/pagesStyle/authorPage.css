@@ -1,16 +1,39 @@
 @import url(../varabiles.css);
 @import url(../stdClasses.css);
 @import url(../componentsStyle/header.css);
-@import url(../author-card/author-card-style.css);
-@import url(../card/card-style.css);
+@import url(../componentsStyle/authorCard.css);
+@import url(../componentsStyle/card.css);
 @import url(../componentsStyle/footer.css);
 
 .row{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 }
 
- .author-card{
-    margin: 1em 1em 1em 1em ;
+.row .author-card , .row .card{
+    width: 32%;
+
+}
+
+@media only screen and (max-width: 768px){
+    .row{
+        display: block;
+    }
+    .row .author-card , .row .card{
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 1200px){
+    .container{
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .container{
+        width: 1200px;
+    }
 }
