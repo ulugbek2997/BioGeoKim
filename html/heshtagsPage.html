@@ -5,81 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>#Heshteg</title>
-<link rel="stylesheet" href="./heshteg-style.css">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="../css/pagesStyle/heshtegPage.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
 
-    <header class="header-style">
+<header class="dFlex contentCenter">     
+    <div class="container dFlex alignCenter contentSpaceBetween">
+     <ul class="leftSectionUl dFlex alignCenter">
+      <li><h3>BioGeoKim</h3></li>
+      <li class="xClass"><a class="marginLeft"  id="bio" href= "">Biologiya</a></li>
+      <li class="xClass"><a class="paneMargin" id="geo" href="">Geografiya</a></li>
+      <li class="xClass"><a id="kim" href="">Kimyo</a></li>
+     </ul>
 
-        <div class="header-main">
-            <section class="left">
-                <div class="left-title"> 
-                    <h3>Article</h3>
-                </div>
+     <ul id="bar" class="dFlex xClass">
+      <li><a  id="uzbek" href="" >Uz</a></li>
+      <li>/</li>
+      <li><a id="russian" href="">Py</a></li>
+      <li><a id="english" href="">En</a></li>
+      <li class="paneMargin">|</li>
+      <li><a class="mainColor" href="">71 288 46 54 (139)</a> </li>
+     </ul>
                 
-                <div id="leftSectionMain" class="left-main">
-                    <ul class="leftSectionUl">
-                        <li>
-                            <a href="">Biologiya</a>
-                        </li>
-                        <li>
-                            <a href="">Geografiya</a>
-                        </li>
-                        <li>
-                            <a href="">Kimyo</a>
-                        </li>
-                    </ul>
-                </div>
+     <div id="hamburgerBtn" class="hamburger">
+      <i class="ri-menu-line"></i>
+     </div>   
+    </div>     
+</header>
+
+<main id="main" class="dFlex contentCenter">  
+    <div class="container">   
+     <h2 id="hashtagName"></h2>
+     <div id="rowMain" class="row"></div>
+    </div>
+</main>
+
+<footer id="footer" class="dFlex contentCenter alignCenter marTop">
+    <div class="container dFlex contentSpaceBetween">   
+      <h3 class="footer-title">BioGeoKim</h3>
+     
+    <ul class="dFlex xClass">
+     <li><a id="footerBioLink" href="">Biologiya</a></li>
+     <li><a class="paneMargin" id="footerGeoLink" href="">Geografiya</a></li>
+     <li><a id="footerKimLink" href="">Kimyo</a></li>
+    </ul>
         
-            </section>
-            <section id="rightSection" class="right">
-                <ul class="rightSectionUl">
-                    <li  class="language"><a id="uzbek" href="" >Uz</a></li>
-                    <li  class="slash">/</li>
-                    <li  class="language"><a id="russian" href="">Py</a></li>
-                    <li  class="language"><a id="english" href="">En</a></li>
-                    <li class="rectangle">|</li>
-                    <li class="telephoneNumber"> <a href="">71 288 46 54 (139)</a> </li>
-                </ul>
-        
-                </section>
-               <div id="hamburgerBtn" class="hamburger">
-                <i class="ri-menu-line"></i>
-               </div>   
-        </div>
-       
-    </header>
-
-    <main id="main">  
-            
-        <div class="main-hashteg">
-            <h2 id="hashtagName"></h2>
-        </div>
-        <div id="cardsRow" class="row">
-        </div>
-
-    </main>
-
-
-    <footer id="footer">
-        <div class="footer-main">
-            <h3 class="footer-title">ARTICLE.COM</h3>
-            <ul class="categoriy">
-                <li><a href="">Biologiya</a></li>
-                <li><a href="">Geografiya</a></li>
-                <li><a href="">Kimyo</a></li>
-            </ul>
-            <ul class="social-page-links">
-                <li><a href=""><i class="ri-instagram-line"></i></a></li>
-                <li><a href=""><i class="ri-twitter-fill"></i></a></li>
-                <li><a href=""><i class="ri-facebook-fill"></i></a></li>
-            </ul>
-      </footer>
-    
-      <script src="../header/header-JS.js"></script>
-      <script src="./main.js"></script>
-
+    <ul class="dFlex">
+     <li><a href=""><i class="ri-instagram-line"></i></a></li>
+     <li><a class="paneMargin" href=""><i class="ri-twitter-fill"></i></a></li>
+     <li><a href=""><i class="ri-facebook-fill"></i></a></li>
+    </ul>
+    </div>
+</footer>
 </body>
+
+<script type="module" src="../js/companents/headerJS.js"></script>
+<script type="module" src="../js/pagesJs/heshTagPage.js"></script>
 </html>

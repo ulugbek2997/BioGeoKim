@@ -1,75 +1,36 @@
-fetch(`http://192.144.37.95:8080/api/articles?langId=1`)
+import { baseURL, imgesUrl } from "../jsLib/articles.js";
+import { createCard, render } from "../jsLib/createFunctions.js";
+import { getCardMain } from "../jsLib/getItemFunctions.js";
+
+const url1 = new URL(window.location.href);
+let langId=url1.searchParams.get('langId');
+const url2 = new URL(window.location.href);
+let journalId=url2.searchParams.get('journalId');
+const url3 = new URL(window.location.href);
+let tagId=url3.searchParams.get('tagId');
+const url4 = new URL(window.location.href);
+let tagName=url4.searchParams.get('tagName');
+
+fetch(`${baseURL}langId=${langId}&journalId=${journalId}&tagId=${tagId}&size=6&offset=0`)
 .then((response) => {
   return response.json();
 })
 .then((data) => {
   console.log(data)
- 
-  const url = new URL(window.location.href);
-  const tagName=url.searchParams.get('tag');
-  console.log(tagName)
+  innerTitle(tagName);
+  
+  for(let index=0;index<6;index++){
+    const  cardMain=getCardMain(data,0,imgesUrl);
+    const card=createCard(cardMain);
+    render(card,"rowMain")
+  }
 
-  innerMainHashtagName(tagName);
-  tagNameCards(data,tagName)
   return data
 });
 
-function innerMainHashtagName(item){
-    const hashtagName =item;
-    document.getElementById('hashtagName').innerText = '#'+hashtagName;
+function innerTitle(item){
+    document.getElementById('hashtagName').innerText = `#${item}`;
 }
 
 
-function tagNameCards(item1,item2){
 
-     for(i=0;i<item1['length'];i++){
-        for(j=0;j<item1[i]['tags']['length'];j++){
-            const nametag=item1[i]['tags'][j]['name'];
-            if(item2==nametag){
-             createCard(item1,i);
-            }
-        }
-     }
-   
-
-}
-
-
-function createCard(item1,item2){
-
-    const newCard=item1[item2];  
-    const date = new Date(newCard['date'] ? newCard['date'] : null);  
-    let dateStr = ("00" + date.getDate()).slice(-2) + "." + ("00" + (date.getMonth() + 1)).slice(-2) + "." + date.getFullYear();
-  
-    let card= document.createElement('a');
-    card.href= '../Maqola/index.html?'+ 'id='+`${item2}`;
-    
-    
-    card.classList.add('card')
-  
-    let cardImg =document.createElement('div');
-    cardImg.classList.add('card-img');
-    let cardImgMain=document.createElement('img');
-    cardImgMain.src= 'http://192.144.37.95/images/'+ newCard['image'];
-    cardImg.append(cardImgMain);
-  
-    let category= document.createElement('p');
-    category.classList.add('nameCategoriy');
-    category.innerText= newCard['category']['name'];
-    category.append(cardImg);
-  
-     let titleCard = document.createElement('h4');
-     titleCard.innerText = newCard['title'];
-     titleCard.classList.add('card-title');
-     
-     let textCard = document.createElement('p');
-     textCard.innerHTML = newCard['body'];
-     textCard.classList.add('card-text');
-     
-     let cardDate = document.createElement('p');
-     cardDate.innerText = dateStr;
-     cardDate.classList.add('card-date'); 
-  
-     card.append(cardImg,titleCard,textCard,cardDate);
-    document.getElementById('cardsRow').append(card);
-   }

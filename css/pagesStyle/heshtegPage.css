@@ -1,31 +1,41 @@
 @import url(../varabiles.css);
-@import url(../categoriy-bar/category-bar.css);
-@import url(../header/header-style.css);
-@import url(../card/card-style.css);
-@import url(../footer/footer-styles.css);
+@import url(../stdClasses.css);
+@import url(../componentsStyle/header.css);
+@import url(../componentsStyle/card.css);
+@import url(../componentsStyle/footer.css);
 
-
+main h2{
+    margin: 1em 0 1em 0;
+}
 .row{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
-
 }
 
-main h2{
-    margin: 1em 0 1em 30px;
+.row .card{
+    width: 32%;
 }
 
-@media only screen and (min-width: 1366px){
-    .main-hashteg{
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
 
-    .main-hashteg h2{
-        width: 1366px;
+@media only screen and (max-width: 768px){
+    main .row{
+        display: block;
     }
+    .row .card{
+        width: 100%;
+    }
+}
 
+@media only screen and (max-width: 1200px){
+    .container{
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .container{
+        width: 1200px;
+    }
 }

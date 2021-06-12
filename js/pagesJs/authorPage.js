@@ -7,7 +7,7 @@ let langId=url1.searchParams.get('langId');
 const url2 = new URL(window.location.href);
 let journalId=url2.searchParams.get('journalId');
 const url3 = new URL(window.location.href);
-let authorId=url2.searchParams.get('authorId');
+let authorId=url3.searchParams.get('authorId');
 
 fetch(`${baseURL}langId=${langId}&journalId=${journalId}&authorId=${authorId}&size=5&offset=0`)
 .then((response) => {

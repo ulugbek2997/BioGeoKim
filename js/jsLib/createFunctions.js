@@ -96,7 +96,7 @@ function createCard(item1){
           hashtag.classList.add('hashtags');
           if(i<4){
               hashtagLink.innerText= `#${item1['hashTags'][i]['tagName']}`;
-              hashtagLink.href ="./heshtagsPage.html"+ `tagId=${item1['hashTags'][i]['tagId']}` 
+              hashtagLink.href =`./heshtagsPage.html?langId=${item1['langId']}&journalId=${item1['journalId']}&tagId=${item1['hashTags'][i]['tagId']}&tagName=${item1['hashTags'][i]['tagName']}` 
           }else{
               break;
           };
