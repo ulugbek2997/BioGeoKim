@@ -11,105 +11,74 @@
 
 <body>
 
-    <header class="header-style">
-        <div class="headerMain">
-            <section class="left">
-                <div class="left-title"> 
-                    <h3>Article</h3>
-                </div>
-                <div id="leftSectionMain" class="left-main">
-                    <ul class="leftSectionUl">
-                        <li>
-                            <a  id="bio" href= "">Biologiya</a>
-                        </li>
-                        <li>
-                            <a id="geo" href="">Geografiya</a>
-                        </li>
-                        <li>
-                            <a id="kim" href="">Kimyo</a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <section id="rightSection" class="right">
-                <ul class="rightSectionUl">
-                    <li  class="language"><a id="uzbek" href="" >Uz</a></li>
-                    <li  class="slash">/</li>
-                    <li  class="language"><a id="russian" href="">Py</a></li>
-                    <li  class="language"><a id="english" href="">En</a></li>
-                    <li class="rectangle">|</li>
-                    <li class="telephoneNumber"> <a href="">71 288 46 54 (139)</a> </li>
-                </ul>
-        
-                </section>
-               <div id="hamburgerBtn" class="hamburger">
-                <i class="ri-menu-line"></i>
-               </div>   
-            </div>
-    </header>
-
-    <main id="main">
-<div class="main-title-row">
-    <div class="catalogueBar">
-
-        <section class="catalogueBarLeft">
-            <ul>
-                <li>|</li>
-                <li><h2>Bialogiya</h2></li>
-            </ul>
-        </section>
-    
-        <section class="catalogueBarright">
-            <ul>
-                <li><h3>Asosiy yangiliklar  |</h3></li>
+<header class="dFlex contentCenter">     
+  <div class="container dFlex alignCenter contentSpaceBetween">
+    <ul class="leftSectionUl dFlex alignCenter">
+      <li><h3>BioGeoKim</h3></li>
+      <li class="xClass"><a class="marginLeft"  id="bio" href= "">Biologiya</a></li>
+      <li class="xClass"><a class="paneMargin" id="geo" href="">Geografiya</a></li>
+      <li class="xClass"><a id="kim" href="">Kimyo</a></li>
+    </ul>
                 
-                <li>Category 1  |</li>
-    
-                <li>Category 2  |</li>
-    
-                <li>Category 3</li>
-            </ul>
-        </section>
-    
+    <ul id="bar" class="dFlex xClass">
+      <li><a  id="uzbek" href="" >Uz</a></li>
+      <li>/</li>
+      <li><a id="russian" href="">Py</a></li>
+      <li><a id="english" href="">En</a></li>
+      <li class="paneMargin">|</li>
+      <li><a class="mainColor" href="">71 288 46 54 (139)</a> </li>
+    </ul>
+                
+    <div id="hamburgerBtn" class="hamburger">
+      <i class="ri-menu-line"></i>
     </div>
-</div>
-
-
-
-        <div id="mainRow" class="row1">
-
-        </div>
-
-
-
-        <div  class="moreContentBtn">
-                <p id="moreCards">
-                    Koproq maqolalarni yuklash
-                <i class="ri-arrow-down-line"></i>
-                </p>     
-        </div>
         
-    </main>
+  </div>     
+</header>
 
-    <footer id="footer">
-        <div class="footer-main">
-            <h3 class="footer-title">ARTICLE.COM</h3>
-            <ul class="categoriy">
-                <li><a href="">Biologiya</a></li>
-                <li><a href="">Geografiya</a></li>
-                <li><a href="">Kimyo</a></li>
-            </ul>
-            <ul class="social-page-links">
-                <li><a href=""><i class="ri-instagram-line"></i></a></li>
-                <li><a href=""><i class="ri-twitter-fill"></i></a></li>
-                <li><a href=""><i class="ri-facebook-fill"></i></a></li>
-            </ul>
-      </footer>
-
+<main id="main" class="dFlex contentCenter">
+  <div class="container">
+    <div class="catalogueBar">
+      <ul class="dFlex alignCenter">
+        <li>|</li>
+        <li><h2>Bialogiya</h2></li>
+      </ul>
     
-</body>
+      <ul class="dFlex alignCenter">
+        <li><h3>Asosiy yangiliklar  |</h3></li>
+        <li>Category 1  |</li>
+        <li>Category 2  |</li>
+        <li>Category 3</li>
+      </ul>
+    </div>
+  
+    <div id="mainRow" class="row dFlex contentSpaceBetween flewWrap"></div>
 
+    <div  class="moreContentBtn">
+      <p id="moreCards">Koproq maqolalarni yuklash<i class="ri-arrow-down-line"></i></p>     
+    </div>
+  </div>        
+</main>
+
+<footer id="footer" class="dFlex contentCenter alignCenter marTop">
+  <div class="container dFlex contentSpaceBetween">   
+    <h3 class="footer-title">BioGeoKim</h3>
+        
+    <ul class="dFlex xClass">
+      <li><a id="footerBioLink" href="">Biologiya</a></li>
+      <li><a class="paneMargin" id="footerGeoLink" href="">Geografiya</a></li>
+      <li><a id="footerKimLink" href="">Kimyo</a></li>
+    </ul>
+        
+    <ul class="dFlex">
+      <li><a href=""><i class="ri-instagram-line"></i></a></li>
+      <li><a class="paneMargin" href=""><i class="ri-twitter-fill"></i></a></li>
+      <li><a href=""><i class="ri-facebook-fill"></i></a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
 <script type="module" src="../js/companents/headerJS.js"></script>
 <script type="module" src="../js/pagesJs/categoryPage.js"></script>
-
 </html>

@@ -1,4 +1,5 @@
 @import url(../varabiles.css);
+@import url(../stdClasses.css);
 @import url(../componentsStyle/header.css);
 @import url(../componentsStyle/card.css);
 @import url(../componentsStyle/shortNewsCard.css);
@@ -8,51 +9,50 @@
 @import url(../componentsStyle/getMoreBtn.css);
 
 
-.row{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+.row .paperBaner{
+    width: 66%;
 }
 
-.row1{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:space-between;
-    align-items: center;
+.row .paperBaner h3 , .row .paperBaner p{
+    display: none;
 }
-.row1 .paperBaner{
-    margin-left: 30px;
+.row .shortNewsCard{
+    width: 32%;
 }
 
-.row1 .catalogue-paper{
-    margin-right: 30px;
+.row .card{
+    width: 32%;
 }
 
 
-@media only screen and (max-width: 1366px){
+@media only screen and (max-width: 768px){
+    .catalogueBar{
+        display: none;
+    }
 
-    .row1{
+    main, .row .shortNewsCard{
+        margin-top: 2em;
+    }
+
+    main .container , .row{
+        display: block;
+    }
+    .container{
+        width: 90%;
+    }
+    .row .paperBaner, .row .shortNewsCard , .row .card{
         width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .row1 .catalogue-paper{
-        margin-top: 1em;
     }
 }
 
-
-@media only screen and (min-width: 1366px){
-    .row1{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .row1 .paperBaner{
-        margin-right: 30px;
+@media only screen and (max-width: 1200px){
+    .container{
+        width: 90%;
     }
 }
 
+@media only screen and (min-width: 1200px){
+    .container{
+        width: 1200px;
+    }
+}

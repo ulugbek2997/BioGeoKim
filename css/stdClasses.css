@@ -15,6 +15,9 @@ display: block;
 .contentSpaceBetween{
     justify-content: space-between;
 }
+.flewWrap{
+    flex-wrap: wrap;
+}
 /* align-items */
 .alignCenter{
     align-items: center;
