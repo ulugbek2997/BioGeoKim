@@ -45,7 +45,7 @@ function createCard(item1){
       const shortNew =document.createElement('a');
       shortNew.classList.add('news','line-clamp');
       shortNew.innerText=item1[j]['title'];
-      shortNew.href ="./html/paperPage.html?"+`langId=${item1[j]['langId']}&journalId=${item1[j]['journalId']}&id=${item1[j]['id']}`;
+      shortNew.href ="../html/paperPage.html?"+`langId=${item1[j]['langId']}&journalId=${item1[j]['journalId']}&id=${item1[j]['id']}`;
       const shortNewDate=document.createElement('p')
       shortNewDate.classList.add('newsDate');
       shortNewDate.innerText=item1[j]['dateStr'];

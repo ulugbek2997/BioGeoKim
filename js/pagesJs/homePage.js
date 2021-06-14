@@ -2,6 +2,10 @@ import { baseURL, imgesUrl,size,offset } from '../jsLib/articles.js';
 import {createCard,createShortNewsCard,randomNumber} from '../jsLib/createFunctions.js';
 import { getCardMain, getShortNewsCardMain } from '../jsLib/getItemFunctions.js';
 import { render } from '../jsLib/renderFunctions.js';
+
+window.addEventListener('load' , load)
+
+function load(){
 const url = new URL(window.location.href);
 let langId=url.searchParams.get('langId');
 if(!langId){
@@ -29,7 +33,7 @@ for(let i=1;i<4;i++){
      
     return data      
   });
-}
+}}
 
 function appendSectionId(item1){
   if(item1==1){

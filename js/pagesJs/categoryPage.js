@@ -2,6 +2,9 @@ import { baseURL, imgesUrl, offset, size } from "../jsLib/articles.js";
 import { createCard, createPaperBaner, createShortNewsCard, render } from "../jsLib/createFunctions.js";
 import { getCardMain, getPaperBannerMain, getShortNewsCardMain } from "../jsLib/getItemFunctions.js";
 
+window.addEventListener('load' , load)
+
+function load(){
 const url1 = new URL(window.location.href);
 let langId=url1.searchParams.get('langId');
 const url3 = new URL(window.location.href);
@@ -51,4 +54,5 @@ moreContentBtn.addEventListener('click',()=>{
   return data
 });
 })
+}
 

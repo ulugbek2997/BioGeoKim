@@ -5,12 +5,6 @@
     text-decoration: none;
 }
 
-@import url(./header/header-style.css);
-@import url(./banner/banner-style.css);
-@import url(./card/card-style.css);
-@import url(./banner/banner-style.css);
-@import url(./footer/footer-styles.css);
-
 
 :root {
     --main-color: #2680EB;

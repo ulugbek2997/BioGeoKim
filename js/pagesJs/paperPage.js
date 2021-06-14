@@ -1,7 +1,10 @@
 import { baseURL, baseURL1 , imgesUrl} from "../jsLib/articles.js";
 import { getPaperMain, getShortNewsCardMain } from "../jsLib/getItemFunctions.js";
 import { createShortNewsCard, creatPaperCard , render } from  "../jsLib/createFunctions.js";
-// import { render } from "../js/jsLib/renderFunctions.js";
+
+window.addEventListener('load' , load)
+
+function load(){
 const url1 = new URL(window.location.href);
 let langId=url1.searchParams.get('langId');
 const url2 = new URL(window.location.href);
@@ -32,7 +35,7 @@ fetch(`${baseURL}langId=${langId}&journalId=${journalId}&size=3&offset=0`)
   const shortNewsCard=createShortNewsCard(shortNewsCardMain);
   render(shortNewsCard,"mainRow");
   return data;
-});
+})}
 
 
 

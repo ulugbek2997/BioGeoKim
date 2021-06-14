@@ -1,5 +1,7 @@
 window.addEventListener("load",()=>{
- 
+    const navBarBtn=document.getElementById('hamburgerBtn')
+    navBarBtn.addEventListener('click' , mobileNavBar)
+
     const pageLangId=definitionLangId()
     selectCategory(pageLangId)
  
@@ -40,20 +42,38 @@ function selectCategory(item){
     kimCtg.href=`../html/categoriesPage.html?langId=${item}&journalId=${3}`;
 }
 
-function selectLanguage(item){
+// function selectLanguage(item){
     
-    String.prototype.replaceAt = function(index, replacement) {
-    return this.substr(0, index) + replacement + this.substr(index + replacement.length);
-      }
+//     String.prototype.replaceAt = function(index, replacement) {
+//     return this.substr(0, index) + replacement + this.substr(index + replacement.length);
+//       }
 
-    let url = new URL(window.location.href)
-    let langIdUrl = url.href
-    const langIdIndex = langIdUrl.indexOf("langId")+7;
-    const newUrl = langIdUrl.replaceAt(langIdIndex, `${item}`)
+//     let url = new URL(window.location.href)
+//     let langIdUrl = url.href
+//     const langIdIndex = langIdUrl.indexOf("langId")+7;
+//     const newUrl = langIdUrl.replaceAt(langIdIndex, `${item}`)
     
-    console.log(langIdUrl.replaceAt(langIdIndex, `${item}`))
-    return newUrl
+//     console.log(langIdUrl.replaceAt(langIdIndex, `${item}`))
+//     return newUrl
+// }
+
+function mobileNavBar(){
+    const main=document.getElementById('main')
+    const footer=document.getElementById('footer')
+    const barMain=document.getElementById('bar')
+    
+    main.classList.toggle('dNone')
+    footer.classList.toggle('dNone')
+    barMain.classList.toggle('xClass')
+    barMain.classList.add('navBar')
+
+    let uzbek=document.getElementById('uzbek')
+    let russian=document.getElementById('russian')
+    let english=document.getElementById('english')
+
+ 
+    uzbek.innerText="Uzbek"
+    russian.innerText="Russian"
+    english.innerText="English"
+
 }
-    
-
-

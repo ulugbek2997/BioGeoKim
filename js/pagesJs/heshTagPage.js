@@ -2,6 +2,9 @@ import { baseURL, imgesUrl } from "../jsLib/articles.js";
 import { createCard, render } from "../jsLib/createFunctions.js";
 import { getCardMain } from "../jsLib/getItemFunctions.js";
 
+window.addEventListener('load' , load)
+
+function load(){ 
 const url1 = new URL(window.location.href);
 let langId=url1.searchParams.get('langId');
 const url2 = new URL(window.location.href);
@@ -26,7 +29,7 @@ fetch(`${baseURL}langId=${langId}&journalId=${journalId}&tagId=${tagId}&size=6&o
   }
 
   return data
-});
+})}
 
 function innerTitle(item){
     document.getElementById('hashtagName').innerText = `#${item}`;
